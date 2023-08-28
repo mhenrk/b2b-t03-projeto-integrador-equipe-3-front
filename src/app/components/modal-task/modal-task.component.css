@@ -1,0 +1,72 @@
+.imgContainer{
+    width: 28px;
+    padding-bottom: 8px;
+}
+.imgContainerHome {
+    width: 35px;
+    padding-bottom: 8px;
+}
+.corTask{
+    background: #F9F5F5;
+}
+.areaModal, .inputModal{
+    border-radius: 5px;
+    background: #F9F5F5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    width: 100%;
+}
+.areaModal{
+    max-height: 100px;
+    height: 100px;
+}
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 99;
+}
+.btnContainer{    
+    background-color: #0275d8;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+.btnNovaTask{
+    font-size: 48px;
+    padding: 20px 15px;
+    color: white;
+}
+
+.btnContainerImg:hover{
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+}
+.btnIcon {
+    border: 0;
+}.btnIcon:hover {
+    border: 0;
+    color: #0275d8;
+}
+.btncor1 {
+    background-color: rgba(248, 177, 194, 0.50) !important;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.btncor2 {
+    background-color: rgba(255, 244, 141, .8) !important;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.btncor3 {
+    background-color: rgba(124, 252, 128, .6) !important;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.dashboard-header h1,
+.dashboard-header p {
+    color: white;
+}

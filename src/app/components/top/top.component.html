@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="top_menu topHeaderContainer">
+    <p class="welcomeMsg">Bem vindo</p>
+    <p class="userName">{{ listItemsUsers.name }}</p>
+  </div>
+  <div class="nav_menu fContainer">
+    <div class="nav_itens">
+      <ul style="width: 100%">
+        <li>
+          <button role="button" routerLink="/board">
+            <i class="pi pi-home"> Home</i>
+          </button>
+        </li>
+        <li>
+          <button role="button" routerLink="/perfil">
+            <i class="pi pi-user"> Perfil</i>
+          </button>
+        </li>
+        <li>
+          <button role="button" routerLink="/sobre">
+            <i class="pi pi-info-circle "> Sobre</i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="logout_btn">
+    <button style="width: 100%" role="button" (click)="onLogout()">
+        <i class="pi pi-sign-out"> SAIR</i>
+      </button>
+  </div>
+</div>

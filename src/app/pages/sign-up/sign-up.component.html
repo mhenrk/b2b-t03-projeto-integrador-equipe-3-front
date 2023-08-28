@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="content">
+    <!--  -->
+    <div class="header"><h1>Cadastro</h1></div>
+    <!--  -->
+    <form (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <input
+          type="text"
+          #name="ngModel"
+          id="exampleInputName"
+          aria-describedby="emailHelp"
+          name="name"
+          [(ngModel)]="user.name"
+          placeholder="Nome"
+          required
+        />
+        <div *ngIf="name.invalid"></div>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="email"
+          #email="ngModel"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+          [(ngModel)]="user.email"
+          placeholder="email@email.com"
+          required
+          ngModel
+          [email]="true"
+        />
+        <div *ngIf="email.invalid"></div>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="password"
+          #senha="ngModel"
+          id="exampleInputPassword"
+          name="password"
+          [(ngModel)]="user.password"
+          placeholder="Senha"
+          required
+        />
+
+        <div *ngIf="senha.invalid"></div>
+      </div>
+
+      <div class="btns">
+        <button
+          type="submit"
+          [disabled]="email.invalid || senha.invalid || name.invalid"
+        >
+          Cadastrar
+        </button>
+        <a routerLink="/sign-in">Login</a>
+      </div>
+    </form>
+
+    <!--  -->
+    <div>
+      <app-alert [message]="message" [showAlert]="showAlert" [error]="error"></app-alert>
+    </div>
+  </div>
+</div>

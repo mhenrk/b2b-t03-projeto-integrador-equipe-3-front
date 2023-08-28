@@ -1,0 +1,63 @@
+<!-- Form Card -->
+<div class="container">
+  <div class="content">
+    <!-- Header -->
+    <div class="header"><h1>Login</h1></div>
+
+    <form (ngSubmit)="onSubmit()">
+      <!-- Senha / Validação Senha -->
+      <div class="input-group">
+        <input
+          type="email"
+          name="email"
+          
+          #email="ngModel"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+          [(ngModel)]="user.email"
+          placeholder="email@email.com"
+          ngModel
+          [email]="true"
+          required
+        />
+        <div *ngIf="email.invalid"></div>
+      </div>
+
+      <!-- Senha / Validação Senha -->
+      <div class="input-group">
+        <input
+          type="password"
+          
+          #senha="ngModel"
+          id="exampleInputPassword1"
+          name="password"
+          [(ngModel)]="user.password"
+          placeholder="Senha"
+          required
+        />
+        <div *ngIf="senha.invalid"></div>
+      </div>
+
+      <!-- Botões de Entrar / Cadastrar -->
+      <div class="btns">
+        <button
+          type="submit"
+          [disabled]="email.invalid || senha.invalid"
+          id="meioIn"
+        >
+          Entrar
+        </button>
+        <a routerLink="/sign-up">Cadastrar</a>
+      </div>
+    </form>
+
+    <app-alert
+      [message]="message"
+      [showAlert]="showAlert"
+      [error]="error"
+    ></app-alert>
+  </div>
+
+  <app-lazy-load [showLoad]="showLoad"></app-lazy-load>
+</div>

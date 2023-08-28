@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h5,
+.dados_usuario p  {
+  color: white;
+}
+
+.header_perfil {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.perfil_container {
+  border: 2px solid rgba(235, 235, 235, 0.197);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.211);
+  position: relative;
+}
+
+.dados_container {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-wrap: wrap;
+}
+
+.dados_usuario {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.dados_btn {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.dados_btn > button {
+  padding: 20px;
+  flex: 1;
+}
+
+.container_dados {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.perfilCloseBtn {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 15px 20px;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: white;
+  cursor: pointer;
+}

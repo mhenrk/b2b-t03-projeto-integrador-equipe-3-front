@@ -1,0 +1,119 @@
+<!-- <app-top></app-top>
+<div class="container-fluid fundoBoard">
+  
+  <div class="container fundoContainer">
+    
+    <app-modal-task (loadTask)="loadTask()" [task]="taskUpdate" ></app-modal-task>
+    <div class="example-parent d-flex justify-content-center align-items-center">
+      
+      
+      <div class="list"  *ngFor="let title of listTitle" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
+        
+        <div class="title" >
+          <b>{{ title }}</b>
+        </div>
+        
+        <div class="items">
+            <div
+            class="example-draggable"
+            *ngFor="let item of getListItems(title)"
+            draggable="true"
+            [attr.data-id]="item.taskId"
+            (dragstart)="onDragStart($event, item.taskId)"
+            [ngClass]="{'btncor1' : title === 'Planejado','btncor2' : title === 'Em Andamento','btncor3' : title === 'Concluído'}"
+            >
+            {{ item.title }}
+            <hr class="hrBoard">
+          
+            <div class="d-flex justify-content-center align-items-center">
+              <button class="btn btn-B" (click)="editTask(item)" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                <img src="../../../assets/visualizar.png" width="45%">
+              </button>
+              <button class="btn btnLR btn-B" (click)="editTask(item)" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal">
+                <img src="../../../assets/atualizar.png" width="45%">
+              </button>
+              
+              <button class="btn btn-B" (click)="deleteTask(item)">
+                <img src="../../../assets/icon _trash.png">
+              </button>
+            </div> 
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+<div class="text-center p-2 text-white fixed-bottom footerFundo">
+    <p>© 2023 Copyright: <a class="text-white" href="www.remindapp.com.br">re.mind</a></p>
+</div>
+
+<app-lazy-load [showLoad]="showLoad"></app-lazy-load>
+</div>  -->
+
+<div class="board_container">
+  <div class="sidebar">
+    <app-top></app-top>
+  </div>
+  <div class="board">
+    <app-modal-task
+      (loadTask)="loadTask()"
+      [task]="taskUpdate"
+    ></app-modal-task>
+    <div
+      class="example-parent d-flex justify-content-center align-items-center contentBoard"
+    >
+      <div
+        class="list"
+        *ngFor="let title of listTitle"
+        (dragover)="onDragOver($event)"
+        (drop)="onDrop($event)"
+      >
+        <div class="title">
+          <b>{{ title }}</b>
+        </div>
+
+        <div class="items">
+          <div
+            class="example-draggable"
+            *ngFor="let item of getListItems(title)"
+            draggable="true"
+            [attr.data-id]="item.taskId"
+            (dragstart)="onDragStart($event, item.taskId)"
+            [ngClass]="{
+              btncor1: title === 'Planejado',
+              btncor2: title === 'Em Andamento',
+              btncor3: title === 'Concluído'
+            }"
+          >
+            <div class="dragglable_header">
+              {{ item.title }}
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center draggable_btn">
+              <button
+                class="btn btn-B"
+                (click)="editTask(item)"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                <img src="../../../assets/visualizar.png" width="45%" />
+              </button>
+              <button
+                class="btn btnLR btn-B"
+                (click)="editTask(item)"
+                data-bs-target="#exampleModalToggle1"
+                data-bs-toggle="modal"
+              >
+                <img src="../../../assets/atualizar.png" width="45%" />
+              </button>
+
+              <button class="btn btn-B" (click)="deleteTask(item)">
+                <img src="../../../assets/icon _trash.png" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

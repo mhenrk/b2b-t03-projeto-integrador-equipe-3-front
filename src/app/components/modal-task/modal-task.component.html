@@ -1,0 +1,115 @@
+<!-- Adicionar Tarefa -->
+<div class="modal fade fundo" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header corTask">
+        <h1 class="modal-title fs-2" id="exampleModalToggleLabel"><img class="imgContainer" src="../../../assets/add.svg"> Nova Tarefa</h1>
+        <button type="button" class="btn fs-3" data-bs-dismiss="modal" aria-label="Close" (click)="onClose()">X</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label"><p class="h5">Título:</p></label>
+            <input type="text" class="form-control inputModal" id="recipient-name" name="title" [(ngModel)]="task.title">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label"><p class="h5">Descrição:</p></label>
+            <textarea class="form-control areaModal" id="message-text" name="description" [(ngModel)]="task.description">
+            </textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-md-center">
+        <button class="btn btn-success btn-lg" (click)="onSubmit()">Adicionar</button>
+      </div>
+      <div class="d-flex justify-content-center align-items-center text-center w-100">
+        <app-alert [message]="message" [showAlert]="showAlert" [error]="error"></app-alert>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fim Adicionar Tarefa -->
+<!-- Atualizar -->
+<div class="modal fade fundo" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" [ngClass]="{'btncor1' : task.status === 'Planejado','btncor2' : task.status === 'Em Andamento','btncor3' : task.status === 'Concluído'}">
+        <h1 class="modal-title fs-2" id="exampleModalToggleLabel">
+          <img class="imgContainer"src="../../../assets/atualizar.png"> Atualizar Tarefa</h1>
+        <button type="button" class="btn fs-3" data-bs-dismiss="modal" aria-label="Close" (click)="onClose()">X</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">
+              <p class="h5">Título:</p>
+            </label>
+            <input type="text" class="form-control inputModal" id="recipient-name" name="title"
+              [(ngModel)]="task.title">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">
+              <p class="h5">Descrição:</p>
+            </label>
+            <textarea class="form-control areaModal" id="message-text" name="description"
+              [(ngModel)]="task.description"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-md-center">
+        <button class="btn btn-success btn-lg" (click)="onSubmit()">Atualizar</button>
+      </div>
+      <div class="d-flex justify-content-center align-items-center text-center w-100">
+        <app-alert [message]="message" [showAlert]="showAlert" [error]="error"></app-alert>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fim Atualizar -->
+
+<!-- Visualizar -->
+<div class="modal fade fundo" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered  modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" [ngClass]="{'btncor1' : task.status === 'Planejado','btncor2' : task.status === 'Em Andamento','btncor3' : task.status === 'Concluído'}">
+        <h1 class="modal-title fs-2" id="exampleModalToggleLabel">
+          <img class="imgContainer" src="../../../assets/visualizar.png" width="60%"> Visualizar Tarefa
+        </h1>
+        <button type="button" class="btn fs-3" data-bs-dismiss="modal" aria-label="Close" (click)="onClose()">X</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-1">
+            <label  class="col-form-label">
+              <p class="h5"><b>Título:</b> {{task.title}}</p>
+            </label>
+          </div>
+          <div class="mb-0">
+            <label  class="col-form-label">
+              <p class="h5"><b>Status:</b> {{task.status}}</p>
+            </label>
+          </div>
+          <div class="mb-0">
+            <label class="col-form-label">
+              <p class="h5"><b>Descrição:</b> {{task.description}}</p>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fim visualizar -->
+
+<div class="dashboard-header">
+  <div>
+    <h1>Dashboard</h1>
+  </div>
+</div>
+<div class="navbar justify-content-end back-to-top">
+  <button class="btnContainer" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+    <span class="btnNovaTask">+</span>
+  </button>
+</div>

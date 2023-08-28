@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+a,
+button {
+    font-family: Inter;
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #D9D9D9;
+    /* cinza */
+}
+.fundoUp {
+    background: #D9D9D9;
+    background-image: url("../../../assets/Ellipse.svg");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.row {
+    height: 100vh;
+}
+
+.esferaLogin {
+    width: 480px;
+    height: 480px;
+    border-radius: 750px;
+    background: rgba(133, 181, 252, 0.95);
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+
+.arealogin input {
+    width: 340px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #E4E3E3 0%, #E8E4E4 0.01%, #FFF 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+input {
+    color: #616161;
+    font-size: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 10px;
+}
+
+input::-webkit-input-placeholder {
+    color: #b1b1b1 !important;
+}
+
+button,
+a {
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgb(99, 99, 99);
+}
+
+.btnLeft {
+    margin-right: 20px;
+}
+
+.btncadastro {
+    padding: 8px;
+}
+
+.fonte {
+    margin-top: -30px;
+    color: #FFFBFB;
+    text-align: center;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgb(99, 99, 99);
+}
+
+.title img {
+    margin: 0;
+    position: absolute;
+    bottom: 45%;
+    left: 5%;
+    width: 280px;
+}
+
+@media (max-width: 768px) {
+    .fundo {
+        background-image: url("../../../assets/EllipseCell.svg") !important;
+        background-size: 70% 100% !important;
+    }
+
+    .layoutlogin {
+        width: 90% !important;
+        height: 60% !important;
+        flex-shrink: 0;
+        margin-top: 12px;
+    }
+
+    .esferaLogin {
+        max-width: 340px;
+        max-height: 340px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        flex-shrink: 0;
+        margin-top: -30px;
+    }
+
+    .arealogin input {
+        width: 250px !important;
+        height: 25px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #E4E3E3 0%, #E8E4E4 0.01%, #FFF 100%);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    }
+
+    .title img {
+        margin: 0;
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        width: 180px;
+    }
+
+    button,
+    a {
+        width: 100px;
+        height: 30px;
+        font-size: 14px;
+        margin-top: 10px !important;
+        text-shadow: 1px 1px 2px rgb(99, 99, 99);
+    }
+
+    input {
+        color: #616161;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .btncadastro {
+        padding: 5px;
+    }
+}

@@ -1,0 +1,48 @@
+<div class="perfil_container">
+  <div class="header_perfil">
+    <div>
+      <h5 class="fs-3">
+        <b>Perfil</b>
+      </h5>
+    </div>
+    <div class="perfilCloseBtn">
+      <a routerLink="/board">X</a>      
+    </div>
+  </div>
+
+  <div class="dados_container">
+    <div class="container_dados">
+      <div class="dados_usuario">
+        <p><b>Nome: </b> {{ listItemsUsers.name }}</p>
+        <p><b>Email: </b> {{ listItemsUsers.email }}</p>
+      </div>
+  
+      <div class="dados_btn">
+        <button
+          class="btn btn-outline-primary"
+          (click)="editUserPerfil(listItemsUsers)"
+          data-bs-target="#exampleModalToggle5"
+          data-bs-toggle="modal"
+        >
+          <i class="pi pi-lock" style="font-size: 40px"></i>
+          <p>Alterar Senha</p>
+        </button>
+  
+        <button
+          class="btn btn-outline-success"
+          (click)="editUser(listItemsUsers)"
+          data-bs-target="#exampleModalToggle3"
+          data-bs-toggle="modal"
+        >
+          <i class="pi pi-user" style="font-size: 40px"></i>
+          <p>Atualizar Perfil</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-modal-user
+    (loadTask)="loadUser()"
+    [user]="listItemsUsers"
+  ></app-modal-user>
+</div>
