@@ -9,7 +9,7 @@ export class ApiTodoListService {
 
   constructor() {
     this.axiosInstance = axios.create({
-      baseURL: 'https://localhost:7109',
+      baseURL: 'https://apieqp1.azurewebsites.net/',
       timeout: 5000,
       headers: {
         'Content-Type': 'application/json'
